@@ -1,0 +1,37 @@
+{
+  "name": "vef1-2020-v9-main",
+  "version": "1.0.0",
+  "description": "## Lýsing",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "babel": "^6.23.0",
+    "browser-sync": "^2.26.13",
+    "concurrently": "^5.3.0",
+    "date-fns": "^2.16.1",
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "leaflet": "^1.7.1",
+    "save-dev": "0.0.1-security"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "rollup": "^2.33.1",
+    "rollup-plugin-babel": "^4.4.0"
+  },
+  "scripts": {
+    "babel": "babel src --out-dir dist",
+    "babel-watch": "babel src --out-dir dist --watch",
+    "rollup": "rollup -c",
+    "rollup-watch": "rollup -c -w",
+    "test": "eslint src/*/**",
+    "dev": "browser-sync start --server --files ./dist/bundle.js styles.css"
+  },
+  "author": "Birgitta",
+  "license": "ISC"
+}

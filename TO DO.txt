@@ -1,0 +1,13 @@
+utils:
+-formatDate (done?)
+
+map:
+-init (done)
+-createPopup (done?)
+
+earthquakes:
+-fetch (done?)
+
+index:
+-import (done)
+-víra saman
