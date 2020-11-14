@@ -21,20 +21,18 @@ import { format } from 'date-fns';
 export function element(name, attributes = null, events = null, ...children) {
   const myEl = document.createElement(name);
 
-  for (const child of children) {
-    if (!child) {
-
-    } else {
+  children.forEach((child) => {
+    if (child) {
       if (attributes) {
-        for (const attrib in attributes) {
+        Object.keys(attributes).forEach((attrib) => {
           myEl.setAttribute(attrib, attributes[attrib]);
-        }
+        });
       }
 
       if (events) {
-        for (const event in events) {
+        Object.keys(events).forEach((event) => {
           myEl.addEventListener(event, events[event]);
-        }
+        });
       }
 
       if (typeof child === 'string') {
@@ -43,7 +41,7 @@ export function element(name, attributes = null, events = null, ...children) {
         myEl.appendChild(child);
       }
     }
-  }
+  });
 
   return myEl;
 }

@@ -1,5 +1,5 @@
 import { el, element, formatDate } from './lib/utils';
-import { fetchEarthquakes } from './lib/earthquakes';
+import fetchEarthquakes from './lib/earthquakes';
 import { init, createPopup } from './lib/map';
 
 function helper(feature) {
